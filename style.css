@@ -23,6 +23,7 @@ body {
   flex-direction: column;
   justify-content: space-between;
   height: 100vh;
+  height: 100svh;
 }
 .shape {
   min-width: 150px;
