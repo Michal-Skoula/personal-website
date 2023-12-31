@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&display=swap');
+
+* {
+  box-sizing: border-box;
+  padding:0;
+  margin:0;
+  overflow: hidden;
+}
+html {
+  height: 100vh;
+  height: 100svh;
+  width: 100vw;
+  max-width: 100%;
+}
+body {
+  display: grid;
+  grid-template-columns: 1fr minmax(150px 20vw);
+}
+.container {
+  padding:32px;
+  width:100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
+}
+.shape {
+  min-width: 150px;
+  width: 20vw;
+  position: absolute;
+  height:100%;
+  right:0;
+}
+.logo {
+  min-width: 170px;
+  width:30vw;
+  max-width: 300px;
+}
+h1, p {
+  font-family: 'DM Sans', sans-serif;
+  letter-spacing: 2px;
+}
+h1 {
+  font-weight: 500;
+  font-size:50px;
+  margin-bottom:16px;
+}
+p {
+  font-weight: 500;
+  font-size:20px;
+}
+.mono {
+  font-family: 'DM Mono', monospace;
+  font-size:16px;
+  font-weight: 500;
+  color:#2b2b2b;
+  letter-spacing: -0.5px;
+}
+span::after {
+  content: '';
+  color: #0A4EBD;
+  letter-spacing: 4px;
+  margin-left:2px;
+  animation: dotAnimation 2.5s infinite alternate-reverse steps(4) ;
+}
+a {
+  color:inherit;
+  transition: color 150ms;
+  text-decoration: underline;
+  letter-spacing: 2px;
+}
+a:hover {
+  color:#0A4EBD;
+}
+@keyframes dotAnimation {
+  from {
+    content: "";
+  }
+  33% {
+    content: ".";
+  }
+  66% {
+    content: "..";
+  }
+  100% {
+    content: '...';
+  }
+}
+.icon {
+  margin-right:4px;
+}
+@media screen and (max-width:500px) {
+  h1 {
+    font-size:36px;
+  }
+  p {
+    font-size: 16px;
+  }
+  .container {
+    max-width: 90%;
+  }
+}
